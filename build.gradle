@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.example'
+version = '0.1.0-SNAPSHOT'
+
+ext {
+    seleniumVersion = '4.44.0'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+application {
+    mainClass = 'com.example.App'
+}
+
+dependencies {
+    implementation "org.seleniumhq.selenium:selenium-java:${seleniumVersion}"
+    implementation 'io.github.bonigarcia:webdrivermanager:5.8.0'
+    testImplementation 'org.testng:testng:7.10.2'
+}
+
+buildDir = 'build'
+
+test {
+    useTestNG()
+    
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
