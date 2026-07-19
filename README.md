@@ -3,7 +3,7 @@
 This repository contains automated UI tests for the Kristalball Web Application using Java, Selenium WebDriver, and TestNG.
 
 ## Prerequisites
-- **Java Development Kit (JDK):** Version 11 or higher.
+- **Java Development Kit (JDK):** Version 17 or higher.
 - **Google Chrome:** Needs to be installed on your local machine.
 
 ## How to Run Tests Locally
