@@ -26,7 +26,6 @@ jobs:
     - name: Run Tests with Gradle Wrapper
       run: |
         chmod +x gradlew
-        sed -i -e 's/\r$//' gradlew
         ./gradlew test
       env:
         CI: true
