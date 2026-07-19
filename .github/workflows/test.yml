@@ -24,6 +24,8 @@ jobs:
       uses: gradle/actions/setup-gradle@v3
       
     - name: Run Tests with Gradle Wrapper
-      run: ./gradlew test
+      run: |
+        chmod +x gradlew
+        ./gradlew test
       env:
         CI: true
