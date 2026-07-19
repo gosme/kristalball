@@ -9,7 +9,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v4
@@ -24,8 +24,6 @@ jobs:
       uses: gradle/actions/setup-gradle@v3
       
     - name: Run Tests with Gradle Wrapper
-      run: |
-        chmod +x gradlew
-        ./gradlew test
+      run: .\gradlew test
       env:
         CI: true
